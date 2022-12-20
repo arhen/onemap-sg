@@ -78,7 +78,7 @@
   const nearMeMarket = L.marker([1.326994, 103.854161], {opacity: 0, icon: nearMeIcon}).addTo(map);
 
   // Create 10 random markers for each data
-  for (let i = 0; i < 10; i++) {
+  for (let i = 0; i < 40; i++) {
     // Create a random marker for today's data
     const todayMarker = L.marker([Math.random() * (maxLat - minLat) + minLat, Math.random() * (maxLn- minLn) + minLn], { icon: todayIcon}).addTo(map);
 
