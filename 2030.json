@@ -1,0 +1,32 @@
+[
+  {
+    "latitude": 1.3385,
+    "longitude": 103.8989,
+    "title": "EV Charging Point at Bedok Reservoir MRT Station (2030)",
+    "description": "Located at the car park of Bedok Reservoir MRT station, this EV charging point will be convenient for those commuting or visiting the nearby shopping malls."
+  },
+  {
+    "latitude": 1.3356,
+    "longitude": 103.9019,
+    "title": "EV Charging Point at Dakota MRT Station (2030)",
+    "description": "Located at the car park of Dakota MRT station, this EV charging point will be convenient for those commuting or visiting the nearby shopping malls."
+  },
+  {
+    "latitude": 1.3389,
+    "longitude": 103.9013,
+    "title": "EV Charging Point at Mountbatten MRT Station (2030)",
+    "description": "Located at the car park of Mountbatten MRT station, this EV charging point will be convenient for those commuting or visiting the nearby shopping malls."
+  },
+  {
+    "latitude": 1.3400,
+    "longitude": 103.8983,
+    "title": "EV Charging Point at Stadium MRT Station (2030)",
+    "description": "Located at the car park of Stadium MRT station, this EV charging point will be convenient for those commuting or visiting the nearby shopping malls."
+  },
+  {
+    "latitude": 1.3375,
+    "longitude": 103.9011,
+    "title": "EV Charging Point at Paya Lebar Quarter (2030)",
+    "description": "Located at the car park of Paya Lebar Quarter, this EV charging point will be convenient for those commuting or visiting the nearby shopping malls and offices."
+  }
+]

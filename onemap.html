@@ -113,7 +113,7 @@
             <label class="inline-block align-middle">
               <input type="radio" name="radio" value="2030-ev" id="2030-ev" class="form-radio inline-block align-middle"> 2030 EV
             </label>
-            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-4 rounded" id="near-me">Near Me</button> (press again to change loc)
+            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-4 rounded" id="near-me">Near Me</button>
             <div id='mapdiv' class="mt-5" style='height:600px;'></div>
         </div>
         <div  class="col-span-12 mt-5 mb-3">
@@ -193,8 +193,6 @@
       clearMarkers()
 
       getTodayMarkers()
-      markers2025 = []
-      markers2030 = []
   });
   document.getElementById('2025-ev').addEventListener('click', function() {
       // Show today's and 2025's EV markers
@@ -202,8 +200,6 @@
 
       getTodayMarkers()
       get2025Markers()
-      markers2025 = []
-      // markers2030 = []
   });
   document.getElementById('2030-ev').addEventListener('click', function() {
       // Show today's, 2025's, and 2030's EV markers
@@ -234,7 +230,7 @@
       // calculate how much data and show lists of it
       markersToday.forEach(marker => (marker.getLatLng().distanceTo(circle.getLatLng())<= radius) ? resultMarkers.push(marker) : [])
       markers2025.forEach(marker => (marker.getLatLng().distanceTo(circle.getLatLng())<= radius) ? resultMarkers.push(marker)  : [])
-      markers2030.forEach(marker => (marker.getLatLng().distanceTo(circle.getLatLng())<= radius) ? resultMarkers.push(marker)  : [])
+      markers2025.forEach(marker => (marker.getLatLng().distanceTo(circle.getLatLng())<= radius) ? resultMarkers.push(marker)  : [])
 
       foundCountel.innerHTML = `Found: ${resultMarkers.length} locations (in 5km)`
       foundCountel.style.display = "block"

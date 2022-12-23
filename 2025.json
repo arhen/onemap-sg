@@ -1,0 +1,56 @@
+[
+  {
+    "latitude": 1.3521,
+    "longitude": 103.9350,
+    "title": "EV Charging Point at Woodlands MRT Station (2025)",
+    "description": "Located at the car park of Woodlands MRT station, this EV charging point will be convenient for those commuting or visiting the nearby shopping malls."
+  },
+  {
+    "latitude": 1.3392,
+    "longitude": 103.9079,
+    "title": "EV Charging Point at Tampines MRT Station (2025)",
+    "description": "Located at the car park of Tampines MRT station, this EV charging point will be convenient for those commuting or visiting the nearby shopping malls."
+  },
+  {
+    "latitude": 1.3670,
+    "longitude": 103.9450,
+    "title": "EV Charging Point at Yishun MRT Station (2025)",
+    "description": "Located at the car park of Yishun MRT station, this EV charging point will be convenient for those commuting or visiting the nearby shopping malls."
+  },
+  {
+    "latitude": 1.3697,
+    "longitude": 103.8824,
+    "title": "EV Charging Point at Pasir Ris MRT Station (2025)",
+    "description": "Located at the car park of Pasir Ris MRT station, this EV charging point will be convenient for those commuting or visiting the nearby shopping malls."
+  },
+  {
+    "latitude": 1.3400,
+    "longitude": 103.8840,
+    "title": "EV Charging Point at Bedok MRT Station (2025)",
+    "description": "Located at the car park of Bedok MRT station, this EV charging point will be convenient for those commuting or visiting the nearby shopping malls."
+  },
+  {
+    "latitude": 1.3378,
+    "longitude": 103.9073,
+    "title": "EV Charging Point at Simei MRT Station (2025)",
+    "description": "Located at the car park of Simei MRT station, this EV charging point will be convenient for those commuting or visiting the nearby shopping malls."
+  },
+  {
+    "latitude": 1.3525,
+    "longitude": 103.9656,
+    "title": "EV Charging Point at Sembawang MRT Station (2025)",
+    "description": "Located at the car park of Sembawang MRT station, this EV charging point will be convenient for those commuting or visiting the nearby shopping malls."
+  },
+  {
+    "latitude": 1.3519,
+    "longitude": 103.9584,
+    "title": "EV Charging Point at Admiralty MRT Station (2025)",
+    "description": "Located at the car park of Admiralty MRT station, this EV charging point will be convenient for those commuting or visiting the nearby shopping malls."
+  },
+  {
+    "latitude": 1.3384,
+    "longitude": 103.9127,
+    "title": "EV Charging Point at Upper Changi MRT Station (2025)",
+    "description": "Located a Upper Changi MRT Station"
+  }
+]
