@@ -137,26 +137,26 @@
   const todayIcon = L.icon({
     iconUrl: 'img/today.png',
     iconSize: [26,39],
-    iconAnchor: [22, 94],
-    popupAnchor: [-3, -76]
+    iconAnchor: [13, 39],
+    // popupAnchor: [-3, -76]
   });
   const i2025Icon = L.icon({
     iconUrl: 'img/2025.png',
     iconSize: [26,39],
-    iconAnchor: [22, 94],
-    popupAnchor: [-3, -76]
+    iconAnchor: [13, 94],
+    // popupAnchor: [-3, -76]
   });
   const i2030Icon = L.icon({
     iconUrl: 'img/2030.png',
     iconSize: [26,39],
-    iconAnchor: [22, 94],
-    popupAnchor: [-3, -76]
+    iconAnchor: [13, 94],
+    // popupAnchor: [-3, -76]
   });
   const nearMeIcon = L.icon({
     iconUrl: 'img/me.png',
     iconSize: [24, 24],
-    iconAnchor: [22, 94],
-    popupAnchor: [-3, -76]
+    iconAnchor: [12, 94],
+    // popupAnchor: [-3, -76]
   });
 
 
@@ -167,7 +167,7 @@
   const basemap = L.tileLayer('https://maps-{s}.onemap.sg/v3/Default/{z}/{x}/{y}.png', {
     detectRetina: true,
     maxZoom: 18,
-    minZoom: 11
+    minZoom: 13
   });
 
   map.setMaxBounds([[1.56073, 104.1147], [1.16, 103.502]]);
@@ -176,15 +176,22 @@
 
   searchLayers = L.layerGroup().addTo(map);
 
-  map.addControl( new L.Control.Search({
+  controlSearch = new L.Control.Search({
         collapsed: false,
         autoCollapse: false,
         autoType: false,
         minLength: 2,
+        zoom: 16,
         textPlaceholder: "Find Location",
-        layer: searchLayers
-      })
-  );
+        layer: searchLayers,
+        marker: false
+      }).on('search:locationfound', function(event) {
+          event.layer.openPopup();
+      }).on('search:cancel', function(event) {
+          map.closePopup()
+          map.setView([center.x, center.y], 12)
+      }).addTo(map)
+
 
 
   // Add event listeners to radio buttons
@@ -238,14 +245,14 @@
 
       foundCountel.innerHTML = `Found: ${resultMarkers.length} locations (in 5km)`
       foundCountel.style.display = "block"
-      resultMarkers.forEach(item => {
+      resultMarkers.forEach(function (item, i) {
         console.log(item)
         let element = `
           <div class="inline-block">
-          <a href="#" class="flex flex-col items-center bg-white border rounded-lg shadow-md md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+          <a href="#" id="" class="flex flex-col items-center bg-white border rounded-lg shadow-md md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
               <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg" src="https://flowbite.com/docs/images/blog/image-4.jpg" alt="">
               <div class="flex flex-col justify-between p-4 leading-normal">
-                  <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">${item.options.title} (${(item.getLatLng().distanceTo([lat,lng]) / 1000).toFixed(2)} KM)</h5>
+                  <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">${item.options.title} (${(item.getLatLng().distanceTo([lat,lng]) / 1000).toFixed(2)} KM away)</h5>
                   <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise ${item.options.desc}</p>
               </div>
           </a>
